@@ -70,7 +70,7 @@ const PortfolioHome: React.FC = () => {
           <div className="absolute inset-0 z-0 pointer-events-none">
             <LetterGlitch
               glitchColors = {["#2b4539", "#61dca3", "#61b3dc"]}
-              glitchSpeed={5}
+              glitchSpeed={200}
               centerVignette={true}
               outerVignette={false}
               smooth={true}
