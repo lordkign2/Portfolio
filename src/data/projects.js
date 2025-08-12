@@ -3,7 +3,7 @@ export const projects = [
       id: 1,
       title: "Portfolio Website",
       description: "A personal portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
-      href: "https://kingsley-portfolio.netlify.app/",
+      href: "https://umeh-kingsley-portfolio.netlify.app/",
       photoURL: "/portfolio.jpg"
     },
     {
