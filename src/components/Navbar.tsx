@@ -7,14 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    if (document.documentElement.classList.contains("dark")) {
-      setDarkMode(true);
-    }
-  }, []);
 
   const navLinks = [
     { href: "/", label: "Home" },

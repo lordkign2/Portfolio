@@ -69,7 +69,7 @@ const PortfolioHome: React.FC = () => {
       <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center px-4">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <LetterGlitch
-              className="w-full h-full grid place-items-center"
+              glitchColors = {["#2b4539", "#61dca3", "#61b3dc"]}
               glitchSpeed={5}
               centerVignette={true}
               outerVignette={false}

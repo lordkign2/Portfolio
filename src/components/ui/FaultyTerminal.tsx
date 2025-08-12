@@ -247,6 +247,7 @@ function hexToRgb(hex: string): [number, number, number] {
 }
 
 export default function FaultyTerminal({
+  
   scale = 1,
   gridMul = [2, 1],
   digitSize = 1.5,
@@ -262,7 +263,7 @@ export default function FaultyTerminal({
   tint = "#ffffff",
   mouseReact = true,
   mouseStrength = 0.2,
-  dpr = Math.min(window.devicePixelRatio || 1, 2),
+  dpr = typeof window !== "undefined" ? Math.min(window.devicePixelRatio || 1, 2) : 1,
   pageLoadAnimation = true,
   brightness = 1,
   className,
@@ -278,6 +279,7 @@ export default function FaultyTerminal({
   const rafRef = useRef<number>(0);
   const loadAnimationStartRef = useRef<number>(0);
   const timeOffsetRef = useRef<number>(Math.random() * 100);
+  const dprToUse = dpr ?? (typeof window !== "undefined" ? Math.min(window.devicePixelRatio || 1, 2) : 1);
 
   const tintVec = useMemo(() => hexToRgb(tint), [tint]);
 
