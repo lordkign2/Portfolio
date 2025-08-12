@@ -1,5 +1,5 @@
 import { 
-    FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaPython, FaDatabase, FaBootstrap 
+    FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaPython, FaBootstrap 
   } from "react-icons/fa";
   import { 
     SiTypescript, SiTailwindcss, SiNextdotjs, SiMongodb, SiPostgresql, SiJavascript, 

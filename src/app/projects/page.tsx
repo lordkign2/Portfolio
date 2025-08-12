@@ -3,6 +3,7 @@ import { projects } from "../../data/projects";
 import SpotlightCard from '../../components/ui/SpotlightCard'; 
 import TargetCursor from '../../components/ui/TargetCursor';
 import DotGrid from '../../components/ui/DotGrid';
+import Image from "next/image";
     
 export default function ProjectsPage() {
   return (
@@ -35,7 +36,8 @@ export default function ProjectsPage() {
               spotlightColor="rgba(100, 151, 200, 0.3)"
             >
               <div className=" dark:bg-gray-700" />
-              <img src={proj.photoURL} alt={proj.title} />
+              
+              <Image src={proj.photoURL} alt={proj.title} layout="responsive" width={800} height={200} />
               <div className="h-full p-6">
                 <h3 className="font-semibold text-xl mb-2">{proj.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{proj.description}</p>

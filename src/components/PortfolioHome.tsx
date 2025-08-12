@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
+import Image from "next/image";
 import { useRef } from "react";
 import TextType from './ui/TextType';
 import ShinyText from './ui/ShinyText';
@@ -248,7 +249,8 @@ const PortfolioHome: React.FC = () => {
                 spotlightColor="rgba(100, 151, 200, 0.3)"
               >
               <div className="h-full bg-gray-700" />
-              <img src={proj.photoURL} alt={proj.title} />
+              
+              <Image src={proj.photoURL} alt={proj.title} layout="responsive" width={800} height={200} />
               <div className="h-full p-4">
                 <h3 className="font-semibold mb-2">{proj.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
