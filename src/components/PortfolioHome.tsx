@@ -69,7 +69,6 @@ const PortfolioHome: React.FC = () => {
       <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center px-4">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <LetterGlitch
-              className="w-full h-full grid place-items-center"
               glitchSpeed={5}
               centerVignette={true}
               outerVignette={false}
