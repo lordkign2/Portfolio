@@ -39,7 +39,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Image
-            src="/profile.jpg" // replace with your profile image
+            src="/me.jpg" // replace with your profile image
             alt="Profile"
             width={160}
             height={160}
