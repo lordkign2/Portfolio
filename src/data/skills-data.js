@@ -3,7 +3,7 @@ import {
   } from "react-icons/fa";
   import { 
     SiTypescript, SiTailwindcss, SiNextdotjs, SiMongodb, SiPostgresql, SiJavascript, 
-    SiSocketdotio, SiExpress, SiEjs, SiFirebase, SiSupabase 
+    SiSocketdotio, SiExpress, SiEjs, SiFirebase, SiSupabase, SiFlutter, SiDart, SiGodotengine, SiKalilinux
   } from "react-icons/si";
   import { RiAiGenerate } from "react-icons/ri";
   import { TbApi } from "react-icons/tb";
@@ -22,11 +22,15 @@ import {
     { label: "Socket.io", icon: <SiSocketdotio size={40} className="text-white" />, level: 80 },
     { label: "API Usage", icon: <TbApi size={40} className="text-purple-400" />, level: 90 },
     { label: "Python", icon: <FaPython size={40} className="text-yellow-400" />, level: 80 },
+    { label: "Flutter", icon: <SiFlutter size={40} className="text-blue-500" />, level: 90 },
+    { label: "Dart", icon: <SiDart size={40} className="text-blue-500" />, level: 95 },
     { label: "C++", icon: <SiCplusplus size={40} className="text-blue-500" />, level: 80 },
     { label: "CSS3", icon: <FaCss3Alt size={40} className="text-blue-400" />, level: 90 },
     { label: "HTML5", icon: <FaHtml5 size={40} className="text-orange-500" />, level: 95 },
     { label: "Bootstrap", icon: <FaBootstrap size={40} className="text-purple-500" />, level: 95 },
     { label: "EJS", icon: <SiEjs size={40} className="text-yellow-200" />, level: 96 },
+    { label: "Godot", icon: <SiGodotengine size={40} className="text-blue-400" />, level: 80 },
+    { label: "Kali Linux", icon: <SiKalilinux size={40} className="text-blue-600" />, level: 83 },
     { label: "Firebase", icon: <SiFirebase size={40} className="text-yellow-400" />, level: 80 },
     { label: "Supabase", icon: <SiSupabase size={40} className="text-green-400" />, level: 85 },
     { label: "AI Usage & Integration", icon: <RiAiGenerate size={40} className="text-pink-400" />, level: 90 },
