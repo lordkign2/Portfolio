@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { skills } from "@/data/skills"; // Assuming alias works, otherwise ../data/skills
 
-export default function SkillsSection() {
+export default function CategorizedSkills() {
     const categories = ["Frontend", "Backend", "Mobile", "Tools", "Other"] as const;
 
     return (

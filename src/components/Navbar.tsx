@@ -59,7 +59,7 @@ export default function Navbar() {
                 {pathname === link.href && (
                   <motion.span
                     layoutId="bubble"
-                    className="absolute inset-0 bg-white/10 dark:bg-white/10 rounded-full -z-10"
+                    className="absolute inset-0 bg-white/10 dark:bg-white/10 rounded-full -z-10 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -91,8 +91,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className={`block p-2 rounded-lg hover:bg-white/10 cursor-target transition font-medium ${pathname === link.href
-                    ? "text-blue-400 bg-white/5"
-                    : "text-gray-300"
+                  ? "text-blue-400 bg-white/5"
+                  : "text-gray-300"
                   }`}
               >
                 {link.label}

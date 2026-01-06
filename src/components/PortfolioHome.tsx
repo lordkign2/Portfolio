@@ -1,7 +1,5 @@
 "use client";
 import React, { Suspense } from "react";
-import { Orbitron } from 'next/font/google';
-
 // Dynamically import sections for better code splitting
 const HeroSection = React.lazy(() => import('./sections/HeroSection'));
 const StatsSection = React.lazy(() => import('./sections/StatsSection'));
@@ -9,11 +7,6 @@ const ExperienceSection = React.lazy(() => import('./sections/ExperienceSection'
 const SkillsSection = React.lazy(() => import('./sections/SkillsSection'));
 const ProjectsSection = React.lazy(() => import('./sections/ProjectsSection'));
 const ContactCTASection = React.lazy(() => import('./sections/ContactCTASection'));
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 // Loading fallback component
 const SectionLoader = () => (

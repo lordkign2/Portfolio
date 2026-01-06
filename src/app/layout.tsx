@@ -102,6 +102,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="grain-overlay" />
         <Navbar />
         <div className="hidden md:block">
           <TargetCursor />

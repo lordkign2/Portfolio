@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Orb from '../../components/ui/Orb';
-import SkillsSection from '../../components/SkillsSection';
+import CategorizedSkills from '../../components/CategorizedSkills';
 
 export default function AboutClient() {
   return (
@@ -122,7 +122,7 @@ export default function AboutClient() {
 
       {/* Skills Section */}
       <div className="relative z-10">
-        <SkillsSection />
+        <CategorizedSkills />
       </div>
     </section>
   );

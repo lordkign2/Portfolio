@@ -1,7 +1,6 @@
 'use client';
 import { projects } from "../../data/projects";
-import SpotlightCard from '@/components/ui/SpotlightCard'; 
-import TargetCursor from '@/components/ui/TargetCursor';
+import SpotlightCard from '@/components/ui/SpotlightCard';
 import DotGrid from '@/components/ui/DotGrid';
 import Image from "next/image";
 
@@ -21,10 +20,6 @@ export default function ProjectsClient() {
           returnDuration={1.5}
         />
       </div>
-       <TargetCursor 
-        spinDuration={2}
-        hideDefaultCursor={true}
-      />
       <div className="max-w-6xl mx-auto z-10 pb-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">My Projects</h1>
@@ -32,7 +27,7 @@ export default function ProjectsClient() {
             A collection of my latest work showcasing innovative solutions and cutting-edge technologies
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((proj, index) => (
             <div
@@ -45,9 +40,9 @@ export default function ProjectsClient() {
                   spotlightColor="rgba(100, 151, 200, 0.3)"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <Image 
-                      src={proj.photoURL} 
-                      alt={proj.title} 
+                    <Image
+                      src={proj.photoURL}
+                      alt={proj.title}
                       fill
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       loading="lazy"
