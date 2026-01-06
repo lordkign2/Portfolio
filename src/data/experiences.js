@@ -1,24 +1,23 @@
 export const experiences = [
     {
-      year: "2022",
-      role: "Computer Operator",
-      company: "Andy-best",
+      year: "2022 - Present",
+      role: "Senior Full-Stack Developer",
+      company: "Freelance",
       description:
-        "Data CRUD. Also built team spirit and cooperation, in conjuction with client communication skills."
+        "Developing scalable web applications for clients worldwide using React, Next.js, Node.js, and TypeScript. Specializing in creating exceptional user experiences with modern UI/UX principles and cutting-edge technologies."
     },
     {
-      year: "2021",
-      role: "Tutor",
-      company: "Whitestone schools",
+      year: "2021 - 2022",
+      role: "Web Development Instructor",
+      company: "Whitestone Schools",
       description:
-         "Gained experience in mentorship, teaching and guiding the younger generation."
+        "Taught web development fundamentals to aspiring developers, mentoring students in HTML, CSS, JavaScript, and React. Developed curriculum and guided students through hands-on projects to build their portfolios."
     },
     {
-      year: "2020",
-      role: "Student",
-      company: "Computer school",
+      year: "2020 - 2021",
+      role: "Computer Science Student",
+      company: "Computer School",
       description:
-         "Attained and improved basic computer skills. Cultivated a good learning habit."
+        "Completed intensive training in computer science fundamentals, programming languages, and software development methodologies. Built a strong foundation in algorithms, data structures, and problem-solving approaches."
     }
   ];
-  

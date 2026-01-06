@@ -1,0 +1,15 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Disallow crawling of API routes and build files
+User-agent: *
+Disallow: /api/
+Disallow: /_next/static/
+
+# Sitemap location
+Sitemap: https://umeh-kingsley-portfolio.netlify.app/sitemap.xml
+
+# Host preference
+Host: https://umeh-kingsley-portfolio.netlify.app

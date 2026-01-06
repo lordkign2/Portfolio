@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
 
@@ -14,6 +15,9 @@ interface ParticlesProps {
   cameraDistance?: number;
   disableRotation?: boolean;
   className?: string;
+  // Add performance control props
+  reducedMotion?: boolean;
+  maxParticles?: number;
 }
 
 const defaultColors: string[] = ["#ffffff", "#ffffff", "#ffffff"];
@@ -102,6 +106,9 @@ const Particles: React.FC<ParticlesProps> = ({
   cameraDistance = 20,
   disableRotation = false,
   className,
+  // New performance props
+  reducedMotion = false,
+  maxParticles = 500,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -138,7 +145,8 @@ const Particles: React.FC<ParticlesProps> = ({
       container.addEventListener("mousemove", handleMouseMove);
     }
 
-    const count = particleCount;
+    // Limit particle count for performance
+    const count = Math.min(particleCount, maxParticles);
     const positions = new Float32Array(count * 3);
     const randoms = new Float32Array(count * 4);
     const colors = new Float32Array(count * 3);
@@ -189,11 +197,13 @@ const Particles: React.FC<ParticlesProps> = ({
       animationFrameId = requestAnimationFrame(update);
       const delta = t - lastTime;
       lastTime = t;
-      elapsed += delta * speed;
+      
+      // Reduce animation speed when reduced motion is enabled
+      elapsed += delta * (reducedMotion ? speed * 0.3 : speed);
 
       program.uniforms.uTime.value = elapsed * 0.001;
 
-      if (moveParticlesOnHover) {
+      if (moveParticlesOnHover && !reducedMotion) {
         particles.position.x = -mouseRef.current.x * particleHoverFactor;
         particles.position.y = -mouseRef.current.y * particleHoverFactor;
       } else {
@@ -201,7 +211,7 @@ const Particles: React.FC<ParticlesProps> = ({
         particles.position.y = 0;
       }
 
-      if (!disableRotation) {
+      if (!disableRotation && !reducedMotion) {
         particles.rotation.x = Math.sin(elapsed * 0.0002) * 0.1;
         particles.rotation.y = Math.cos(elapsed * 0.0005) * 0.15;
         particles.rotation.z += 0.01 * speed;
@@ -233,6 +243,9 @@ const Particles: React.FC<ParticlesProps> = ({
     sizeRandomness,
     cameraDistance,
     disableRotation,
+    // Add new dependencies
+    reducedMotion,
+    maxParticles,
   ]);
 
   return (
