@@ -22,13 +22,13 @@ const nextConfig: NextConfig = {
         fs: false,
       };
     }
-    
+
     // Optimize for production
     if (!dev) {
       // Enable tree shaking
       config.optimization.usedExports = true;
     }
-    
+
     return config;
   },
   // Enable experimental features for better performance
@@ -39,6 +39,11 @@ const nextConfig: NextConfig = {
     },
     // Optimize css
     optimizeCss: true,
+  },
+  // Enable turbopack explicitly (or silence webpack error in Next.js 16)
+  turbopack: {
+    // Set root to current directory to avoid incorrect inference from parent folders
+    root: process.cwd(),
   },
 };
 
