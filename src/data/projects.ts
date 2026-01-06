@@ -10,7 +10,7 @@ export const projects: Project[] = [
     {
         id: 1,
         title: "Personal Portfolio Website",
-        description: "A modern, responsive portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Features cinematic animations, interactive UI components, and optimized performance.",
+        description: "A modern, responsive portfolio built with Next.js 16, Tailwind CSS, and Framer Motion. Features cinematic animations, interactive UI components, and optimized performance.",
         href: "https://umeh-kingsley-portfolio.netlify.app/",
         photoURL: "/portfolio.jpg"
     },
@@ -24,14 +24,14 @@ export const projects: Project[] = [
     {
         id: 3,
         title: "StarnumX Technology Website",
-        description: "Official corporate website for StarnumX technology built with Next.js 15, Tailwind CSS, and TypeScript. Features modern UI design, responsive layouts, and optimized performance.",
+        description: "Official corporate website for StarnumX technology built with Next.js 16, Tailwind CSS, and TypeScript. Features modern UI design, responsive layouts, and optimized performance.",
         href: "https://starnumx.netlify.app/",
         photoURL: "/starnumx.jpg"
     },
     {
         id: 4,
         title: "Palette Pigeon UI Kit",
-        description: "A comprehensive UI component library with complex UI structuring. Built with Next.js 15, Tailwind CSS, and TypeScript featuring reusable components and design system.",
+        description: "A comprehensive UI component library with complex UI structuring. Built with Next.js, Tailwind CSS, and TypeScript featuring reusable components and design system.",
         href: "https://palette-pigeon.netlify.app/",
         photoURL: "/palette-pigeon.png"
     },
@@ -45,14 +45,14 @@ export const projects: Project[] = [
     {
         id: 6,
         title: "Housing Waitlist Platform",
-        description: "A waitlist platform for housing platform launch, featuring TypeScript with Next.js 15. Implements user registration, waitlist management, and email notifications.",
+        description: "A waitlist platform for housing platform launch, featuring TypeScript with Next.js. Implements user registration, waitlist management, and email notifications.",
         href: "https://campsite-waitlist.netlify.app/",
         photoURL: "/waitlist.jpg"
     },
     {
         id: 7,
         title: "Freelancers pricing guide",
-        description: "A pricing guide for freelancers built with Next.js 15, Tailwind CSS, and TypeScript. Features modern UI design, responsive layouts, and optimized performance.",
+        description: "A pricing guide for freelancers built with Next.js, Tailwind CSS, and TypeScript. Features modern UI design, responsive layouts, and optimized performance.",
         href: "https://pricewiseui.netlify.app/",
         photoURL: "/pricewiseui.jpg"
     },
