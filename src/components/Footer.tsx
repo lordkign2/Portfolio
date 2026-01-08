@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiCheck } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiCheck, FiFacebook, FiInstagram } from "react-icons/fi";
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
@@ -22,6 +22,16 @@ export default function Footer() {
       href: "https://www.linkedin.com/in/umeh-kingsley-43a322369",
       icon: <FiLinkedin />,
       label: "LinkedIn"
+    },
+    {
+      href: "https://www.facebook.com/share/1D7ew99sD8",
+      icon: <FiFacebook />,
+      label: "Facebook"
+    },
+    {
+      href: "https://www.instagram.com/lordkign?igsh=NHhiYmdzNzZ1eHIy",
+      icon: <FiInstagram />,
+      label: "Instagram"
     }
   ];
 

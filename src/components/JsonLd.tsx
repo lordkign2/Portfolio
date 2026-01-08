@@ -24,7 +24,9 @@ export default function JsonLd() {
         "sameAs": [
             "https://github.com/lordkign2",
             "https://www.linkedin.com/in/umeh-kingsley-43a322369",
-            "https://twitter.com/lordkign2"
+            "https://twitter.com/lordkign2",
+            "https://www.facebook.com/share/1D7ew99sD8",
+            "https://www.instagram.com/lordkign?igsh=NHhiYmdzNzZ1eHIy"
         ],
         "email": "lordkign1@gmail.com",
         "alumniOf": {
