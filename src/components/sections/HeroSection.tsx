@@ -73,6 +73,11 @@ const HeroSection = () => {
         <a
           href="#projects"
           className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target font-semibold"
+          onClick={() => {
+            import('../../utils/eventTracker').then(({ trackLinkClick }) => {
+              trackLinkClick('View My Work', '#projects');
+            });
+          }}
         >
           View My Work
         </a>
@@ -80,6 +85,16 @@ const HeroSection = () => {
           href="/KingsleyUmehResume.pdf"
           download
           className="border-2 border-gray-300 dark:border-gray-600 px-8 py-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-105 cursor-target font-semibold"
+          onClick={() => {
+            import('../../utils/eventTracker').then(({ trackEvent }) => {
+              trackEvent('file_download', {
+                event_category: 'engagement',
+                event_label: 'Download Resume',
+                file_name: 'KingsleyUmehResume.pdf',
+                file_type: 'pdf'
+              });
+            });
+          }}
         >
           Download Resume
         </a>

@@ -66,6 +66,44 @@ export default function JsonLd() {
         }
     };
 
+    const professionalServiceSchema = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Kingsley Umeh Development",
+        "image": "https://umeh-kingsley-portfolio.netlify.app/me.jpeg",
+        "url": "https://umeh-kingsley-portfolio.netlify.app",
+        "telephone": "+2347069939337",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NG"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 6.5244,
+            "longitude": 3.3792
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "sameAs": [
+            "https://github.com/lordkign2",
+            "https://www.linkedin.com/in/umeh-kingsley-43a322369",
+            "https://twitter.com/lordkign2",
+            "https://www.facebook.com/share/1D7ew99sD8",
+            "https://www.instagram.com/lordkign?igsh=NHhiYmdzNzZ1eHIy"
+        ]
+    };
+
     const websiteSchema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -100,6 +138,10 @@ export default function JsonLd() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
             />
         </>
     );

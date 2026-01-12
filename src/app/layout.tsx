@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "Next.js developer",
     "Node.js developer",
     "TypeScript developer",
-    "web development",
+    "web development services",
     "mobile app development",
     "Flutter developer",
     "frontend developer",
@@ -49,7 +49,9 @@ export const metadata: Metadata = {
     "UI/UX design",
     "SEO optimization",
     "responsive web design",
-    "tech innovator"
+    "tech innovator",
+    "Google Ads integration",
+    "conversion rate optimization"
   ],
   authors: [{ name: "Kingsley Umeh", url: "https://umeh-kingsley-portfolio.netlify.app/" }],
   creator: "Kingsley Umeh",
@@ -57,9 +59,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

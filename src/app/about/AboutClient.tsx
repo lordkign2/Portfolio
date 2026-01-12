@@ -55,14 +55,16 @@ export default function AboutClient() {
         </motion.p>
 
         {/* Bio */}
-        <motion.p
-          className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-3xl mx-auto"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
-          I specialize in building scalable web applications using modern technologies like React, Next.js, Node.js, and TypeScript. My journey in tech began with a curiosity for how things work, which evolved into a passion for creating elegant solutions to complex problems. I thrive in collaborative environments and enjoy turning ideas into reality through clean, efficient code.
-        </motion.p>
+          <h2 className="sr-only">Biography</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-3xl mx-auto">
+            I specialize in building scalable web applications using modern technologies like React, Next.js, Node.js, and TypeScript. My journey in tech began with a curiosity for how things work, which evolved into a passion for creating elegant solutions to complex problems. I thrive in collaborative environments and enjoy turning ideas into reality through clean, efficient code.
+          </p>
+        </motion.div>
 
         {/* Personal Interests */}
         <motion.p
@@ -75,35 +77,38 @@ export default function AboutClient() {
         </motion.p>
 
         {/* Skills & Interests */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-          {[
-            {
-              label: "Frontend Expertise",
-              desc: "React, Next.js, TypeScript, Tailwind CSS, and modern UI/UX principles"
-            },
-            {
-              label: "Backend Power",
-              desc: "Node.js, Express, NestJS, PostgreSQL, MongoDB, and RESTful APIs"
-            },
-            {
-              label: "Creative Innovation",
-              desc: "UI/UX Design, Music, Open-source contributions, and problem-solving"
-            },
-          ].map((card, idx) => (
-            <motion.div
-              key={card.label}
-              className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/30 dark:border-gray-700/50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-target"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 + 1 }}
-              whileHover={{ y: -5 }}
-            >
-              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{card.label}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                {card.desc}
-              </p>
-            </motion.div>
-          ))}
+        <div className="mb-12">
+          <h2 className="sr-only">My Expertise & Interests</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                label: "Frontend Expertise",
+                desc: "React, Next.js, TypeScript, Tailwind CSS, and modern UI/UX principles"
+              },
+              {
+                label: "Backend Power",
+                desc: "Node.js, Express, NestJS, PostgreSQL, MongoDB, and RESTful APIs"
+              },
+              {
+                label: "Creative Innovation",
+                desc: "UI/UX Design, Music, Open-source contributions, and problem-solving"
+              },
+            ].map((card, idx) => (
+              <motion.div
+                key={card.label}
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/30 dark:border-gray-700/50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-target"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 + 1 }}
+                whileHover={{ y: -5 }}
+              >
+                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{card.label}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  {card.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}
@@ -121,14 +126,14 @@ export default function AboutClient() {
             Get In Touch
           </a>
           <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <a 
+            <a
               href="/projects"
               className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
             >
               View My Projects
             </a>
             <span className="cursor-target text-gray-400 mx-2">|</span>
-            <a 
+            <a
               href="/services"
               className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
             >

@@ -83,3 +83,15 @@ export function trackLinkClick(linkName: string, url: string): void {
     link_url: url
   });
 }
+
+/**
+ * Track conversion event (for Google Ads)
+ */
+export function trackConversion(sendTo: string, value?: number, currency: string = 'USD', transactionId?: string): void {
+  trackEvent('conversion', {
+    send_to: sendTo,
+    value: value,
+    currency: currency,
+    transaction_id: transactionId
+  });
+}

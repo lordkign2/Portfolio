@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     absolute: "Kingsley Umeh | Senior Full-Stack Developer & Tech Innovator",
     template: "%s | Kingsley Umeh - Professional Full-Stack Developer"
   },
-  description: "Welcome to the portfolio of Kingsley Umeh, a senior full-stack developer with 4+ years of experience creating exceptional digital experiences with React, Next.js, Node.js, and cutting-edge web technologies. Hire expert developers for your project.",
+  description: "Senior Full-Stack Developer specializing in React, Next.js, and Node.js. I build high-performance web applications and scalable digital solutions. Hire a top-tier developer for your next project.",
   keywords: [
     "full stack developer",
     "React developer",
