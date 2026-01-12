@@ -206,7 +206,7 @@ export default function ServicesClient() {
             {businessPackages.map((pkg, idx) => (
               <motion.div
                 key={pkg.title}
-                className={`bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 cursor-target ${
+                className={`bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ${
                   pkg.isPremium 
                     ? "border-blue-500/50 bg-gradient-to-br from-blue-50/20 to-indigo-50/20 dark:from-blue-900/20 dark:to-indigo-900/20 relative overflow-hidden" 
                     : "border-white/30 dark:border-gray-700/50"
@@ -280,10 +280,16 @@ export default function ServicesClient() {
                     </div>
                   </div>
                   <a
-                    href={`https://wa.me/2347069939337?text=Hello%2C%20I'm%20interested%20in%20the%20${encodeURIComponent(pkg.title)}%20package.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-lg font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-md hover:shadow-lg text-center"
+                    onClick={() => {
+                      // Track service inquiry
+                      import('../../utils/eventTracker').then(({ trackServiceInquiry }) => {
+                        trackServiceInquiry(pkg.title);
+                      });
+                                        
+                      // Open WhatsApp with pre-filled message
+                      window.open(`https://wa.me/2347069939337?text=Hello%2C%20I'm%20interested%20in%20the%20${encodeURIComponent(pkg.title)}%20package.`, '_blank');
+                    }}
+                    className="cursor-target inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-lg font-bold hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-[1.02] shadow-md hover:shadow-lg text-center cursor-pointer"
                   >
                     Inquire About This Package
                   </a>
@@ -295,10 +301,11 @@ export default function ServicesClient() {
 
         {/* Call to Action */}
         <motion.div
-          className="text-center"
+          className="backdrop-blur-sm border border-white/30 dark:border-gray-700/50 rounded-2xl p-6 mb-6 shadow-lg hover:shadow-xl transition-all duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 2 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+          whileHover={{ y: -5 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             <span className="text-blue-500 inline-block mr-2"><PhoneIcon className="w-10 h-10" /></span> Let&#39;s Work Together
@@ -306,11 +313,39 @@ export default function ServicesClient() {
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             Tell me about your business and I&#39;ll recommend the best package.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <a 
+              href="/projects"
+              className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
+            >
+              View My Projects
+            </a>
+            <span className="text-gray-400 mx-2">|</span>
+            <a 
+              href="/about"
+              className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
+            >
+              About Me
+            </a>
+            <span className="text-gray-400 mx-2">|</span>
+            <a 
+              href="/contact"
+              className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
+            >
+              Contact
+            </a>
+          </div>
           <a
-            href="https://wa.me/2347069939337?text=Hello%2C%20I'm%20interested%20in%20your%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target"
+            onClick={() => {
+              // Track service inquiry
+              import('../../utils/eventTracker').then(({ trackServiceInquiry }) => {
+                trackServiceInquiry('General Services');
+              });
+              
+              // Open WhatsApp with pre-filled message
+              window.open('https://wa.me/2347069939337?text=Hello%2C%20I%27m%20interested%20in%20your%20services.', '_blank');
+            }}
+            className="cursor-target inline-block bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-lg font-bold hover:from-blue-700 hover:to-indigo-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
           >
             <ArrowRightIcon className="inline-block w-5 h-5 mr-2" /> Request a Free Consultation
           </a>

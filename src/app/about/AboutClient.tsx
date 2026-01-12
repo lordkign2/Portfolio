@@ -35,11 +35,12 @@ export default function AboutClient() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Image
-            src="/me.jpg"
-            alt="Kingsley Umeh"
+            src="/me.jpeg"
+            alt="Kingsley Umeh - Senior Full-Stack Developer Portrait"
             fill
             className="object-cover"
             priority
+            title="Kingsley Umeh - Professional Developer Photo"
           />
         </motion.div>
 
@@ -107,9 +108,11 @@ export default function AboutClient() {
 
         {/* Call to Action */}
         <motion.div
+          className="backdrop-blur-sm border border-white/30 dark:border-gray-700/50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.8 }}
+          transition={{ duration: 0.5, delay: 1.2 }}
+          whileHover={{ y: -5 }}
         >
           <a
             href="/contact"
@@ -117,6 +120,21 @@ export default function AboutClient() {
           >
             Get In Touch
           </a>
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            <a 
+              href="/projects"
+              className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
+            >
+              View My Projects
+            </a>
+            <span className="cursor-target text-gray-400 mx-2">|</span>
+            <a 
+              href="/services"
+              className="cursor-target text-blue-300 hover:text-blue-100 transition-colors duration-300 font-medium underline decoration-blue-300 hover:decoration-blue-100"
+            >
+              Services
+            </a>
+          </div>
         </motion.div>
       </div>
 
