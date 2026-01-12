@@ -6,9 +6,9 @@ interface IconProps {
 }
 
 export const RocketIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -20,9 +20,9 @@ export const RocketIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const ChartGrowthIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -35,9 +35,9 @@ export const ChartGrowthIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const TargetIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -49,9 +49,9 @@ export const TargetIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const TrophyIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -62,9 +62,9 @@ export const TrophyIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const StarIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -74,9 +74,9 @@ export const StarIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const BriefcaseIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -86,9 +86,9 @@ export const BriefcaseIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const PhoneIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -98,9 +98,9 @@ export const PhoneIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const HandshakeIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -116,9 +116,9 @@ export const HandshakeIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const MoneyIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -130,9 +130,9 @@ export const MoneyIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const ArrowRightIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
@@ -142,13 +142,63 @@ export const ArrowRightIcon = ({ className = '', size = 24 }: IconProps) => (
 );
 
 export const DiamondIcon = ({ className = '', size = 24 }: IconProps) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     fill="currentColor"
     className={`w-${size} h-${size} ${className}`}
     aria-hidden="true"
   >
     <path d="M12 2L17 12L12 22L7 12L12 2Z" />
+  </svg>
+);
+
+export const CodeIcon = ({ className = '', size = 24 }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={`w-${size} h-${size} ${className}`}
+    aria-hidden="true"
+  >
+    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+  </svg>
+);
+
+export const CpuIcon = ({ className = '', size = 24 }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={`w-${size} h-${size} ${className}`}
+    aria-hidden="true"
+  >
+    <path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7c0-1.1-.9-2-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z" />
+  </svg>
+);
+
+export const SmartphoneIcon = ({ className = '', size = 24 }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={`w-${size} h-${size} ${className}`}
+    aria-hidden="true"
+  >
+    <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+  </svg>
+);
+
+export const DatabaseIcon = ({ className = '', size = 24 }: IconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={`w-${size} h-${size} ${className}`}
+    aria-hidden="true"
+  >
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+    <circle cx="12" cy="12" r="5" />
+    <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
   </svg>
 );

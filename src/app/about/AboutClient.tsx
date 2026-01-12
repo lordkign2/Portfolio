@@ -51,7 +51,7 @@ export default function AboutClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Hi, I&apos;m Kingsley Umeh, a passionate Senior Full-Stack Developer based in Nigeria with over 4 years of experience creating exceptional digital experiences.
+          Hi, I&apos;m Kingsley Umeh, a passionate Senior Full-Stack Developer based in Nigeria with over 5 years of experience creating exceptional digital experiences.
         </motion.p>
 
         {/* Bio */}
