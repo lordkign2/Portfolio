@@ -44,7 +44,7 @@ export const projects: Project[] = [
         id: 5,
         title: "Palette Pigeon UI Kit",
         description: "A comprehensive UI component library with complex UI structuring. Built with Next.js, Tailwind CSS, and TypeScript featuring reusable components and design system.",
-        href: "https://palette-pigeon.netlify.app/",
+        href: "https://palettepigeon.netlify.app/",
         githubHref: "https://github.com/lordkign2/UI-projects",
         photoURL: "/palette-pigeon.png"
     },
