@@ -30,6 +30,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
+            url: `${baseUrl}/case-studies`,
+            lastModified: lastModified,
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/case-studies/city-explorer-platform`,
+            lastModified: lastModified,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/case-studies/mil-hub`,
+            lastModified: lastModified,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/case-studies/personal-portfolio-website`,
+            lastModified: lastModified,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/contact`,
             lastModified: lastModified,
             changeFrequency: 'yearly',

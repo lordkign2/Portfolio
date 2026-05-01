@@ -40,7 +40,7 @@ const ContactCTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Let&apos;s Build Something Amazing
+          Available for Remote Roles & Freelance Projects
         </motion.h2>
         
         <motion.p 
@@ -50,7 +50,7 @@ const ContactCTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Have a project in mind or looking to collaborate? Let&apos;s connect and bring your vision to life.
+          Open to building scalable web platforms, internal tools, and marketplace systems. Let&apos;s discuss your product goals and delivery timeline.
         </motion.p>
         
         <motion.div
@@ -59,12 +59,28 @@ const ContactCTASection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <a 
-            href="mailto:lordkign1@gmail.com" 
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target"
-          >
-            Get In Touch
-          </a>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="mailto:lordkign1@gmail.com?subject=Hiring%20Inquiry"
+              className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target"
+            >
+              Hire Me
+            </a>
+            <a 
+              href="/projects"
+              className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target"
+            >
+              View Case Studies
+            </a>
+            <a 
+              href="https://calendly.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-500 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target"
+            >
+              Schedule a Call
+            </a>
+          </div>
           
           <div className="mt-8 flex justify-center flex-wrap gap-6">
             <a 

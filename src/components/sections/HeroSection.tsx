@@ -37,8 +37,8 @@ const HeroSection = () => {
           <TextType
             text={[
               "Hi, I'm Kingsley Umeh",
-              "Senior Full-Stack Developer",
-              "Creating Digital Excellence"
+              "Full-Stack Engineer for Marketplace Systems",
+              "Building Scalable Admin & RBAC Platforms"
             ]}
             typingSpeed={10}
             pauseDuration={1500}
@@ -56,7 +56,7 @@ const HeroSection = () => {
       >
         <Suspense fallback={<ComponentLoader />}>
           <ShinyText
-            text="I craft exceptional digital experiences with cutting-edge web technologies, transforming ideas into powerful, scalable solutions."
+            text="Full-stack engineer specializing in scalable marketplace systems, admin dashboards, and role-based architectures using React, Node.js, and MongoDB."
             disabled={false}
             speed={3}
             className='shiny-text shine'
@@ -79,7 +79,7 @@ const HeroSection = () => {
             });
           }}
         >
-          View My Work
+          View Case Studies
         </a>
         <a
           href="/KingsleyUmehResume.pdf"

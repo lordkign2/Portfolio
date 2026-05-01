@@ -33,7 +33,7 @@ export default function ProjectsClient() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">My Projects</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A collection of my latest work showcasing innovative solutions and cutting-edge technologies
+            Case-study driven work highlighting architecture, RBAC, API design, and deployment strategy.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-6 mb-0 pb-0">
             
@@ -82,12 +82,42 @@ export default function ProjectsClient() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-3 text-gray-900 dark:text-white">{proj.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {proj.description}
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                    {proj.description.length > 150 ? `${proj.description.substring(0, 150)}...` : proj.description}
                   </p>
+                  {proj.complexityTags && proj.complexityTags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {proj.complexityTags.slice(0, 3).map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {proj.complexityTags.length > 3 && (
+                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700/40 dark:text-gray-400">
+                          +{proj.complexityTags.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  {proj.caseStudyHref && (
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 italic">
+                      Detailed technical analysis available in case study →
+                    </p>
+                  )}
                 </div>
                 
-                <div className="px-6 pb-6 flex justify-between">
+                <div className="px-6 pb-6 flex justify-between flex-wrap gap-3">
+                  {proj.caseStudyHref && (
+                    <a
+                      href={proj.caseStudyHref}
+                      className="flex items-center cursor-target text-indigo-600 dark:text-indigo-400 font-medium"
+                    >
+                      <span>Read Case Study</span>
+                    </a>
+                  )}
                   <a 
                     onClick={(e) => {
                       e.preventDefault();
@@ -102,7 +132,7 @@ export default function ProjectsClient() {
                     }}
                     className="flex items-center cursor-target text-blue-600 dark:text-blue-400 font-medium"
                   >
-                    <span>View Project</span>
+                    <span>View Live Project</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>

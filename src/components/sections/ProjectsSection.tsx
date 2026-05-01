@@ -29,10 +29,10 @@ const ProjectsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Featured Projects
+            Featured Case Studies
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore my latest work showcasing innovative solutions and cutting-edge technologies
+            Engineering-focused project snapshots with architecture, security, and delivery decisions.
           </p>
         </motion.div>
 
@@ -67,14 +67,69 @@ const ProjectsSection = () => {
                       <p className="text-gray-600 dark:text-gray-300 mb-4">
                         {proj.description}
                       </p>
-                      <div className="flex justify-between">
+                      {proj.problemContext && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">Problem:</span> {proj.problemContext}
+                        </p>
+                      )}
+                      {proj.architectureOverview && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">Architecture:</span> {proj.architectureOverview}
+                        </p>
+                      )}
+                      {proj.authStrategy && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">Auth:</span> {proj.authStrategy}
+                        </p>
+                      )}
+                      {proj.dataModelStructure && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">Data Model:</span> {proj.dataModelStructure}
+                        </p>
+                      )}
+                      {proj.apiDesignPatterns && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">API Design:</span> {proj.apiDesignPatterns}
+                        </p>
+                      )}
+                      {proj.engineeringDecisions && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">Trade-off:</span> {proj.engineeringDecisions}
+                        </p>
+                      )}
+                      {proj.deploymentStrategy && (
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                          <span className="font-semibold text-gray-800 dark:text-gray-100">Deployment:</span> {proj.deploymentStrategy}
+                        </p>
+                      )}
+                      {proj.complexityTags && proj.complexityTags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {proj.complexityTags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <div className="flex justify-between flex-wrap gap-3">
+                        {proj.caseStudyHref && (
+                          <a
+                            href={proj.caseStudyHref}
+                            className="flex items-center text-indigo-600 dark:text-indigo-400 font-medium"
+                          >
+                            <span>Read Case Study</span>
+                          </a>
+                        )}
                         <a 
                           href={proj.href} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex items-center text-blue-600 dark:text-blue-400 font-medium"
                         >
-                          <span>View Project</span>
+                          <span>View Live Project</span>
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>

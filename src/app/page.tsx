@@ -3,12 +3,15 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Kingsley Umeh | Senior Full-Stack Developer & Tech Innovator",
-    template: "%s | Kingsley Umeh - Professional Full-Stack Developer"
+    absolute: "Kingsley Umeh | Full-Stack Engineer for Marketplaces & RBAC Systems",
+    template: "%s | Kingsley Umeh - Full-Stack Engineer"
   },
-  description: "Senior Full-Stack Developer specializing in React, Next.js, and Node.js. I build high-performance web applications and scalable digital solutions. Hire a top-tier developer for your next project.",
+  description: "Full-stack engineer specializing in scalable marketplace systems, admin dashboards, and role-based architectures using React, Node.js, and MongoDB.",
   keywords: [
-    "full stack developer",
+    "full stack engineer",
+    "marketplace systems engineer",
+    "RBAC implementation",
+    "admin dashboard developer",
     "React developer",
     "Next.js developer",
     "Node.js developer",
@@ -31,14 +34,16 @@ export const metadata: Metadata = {
     "UI/UX design",
     "SEO optimization",
     "responsive web design",
-    "tech innovator"
+    "tech innovator",
+    "MongoDB architect",
+    "REST API architecture"
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://umeh-kingsley-portfolio.netlify.app/",
-    title: "Kingsley Umeh | Senior Full-Stack Developer & Tech Innovator",
-    description: "Professional full-stack development services specializing in React, Next.js, Node.js, and cutting-edge web technologies. Hire expert developers for your project.",
+    title: "Kingsley Umeh | Full-Stack Engineer for Marketplaces & RBAC Systems",
+    description: "Engineering scalable marketplace systems and internal tools with React, Node.js, MongoDB, and role-based access control.",
     siteName: "Kingsley Umeh Portfolio",
     images: [
       {
@@ -54,8 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kingsley Umeh | Senior Full-Stack Developer & Tech Innovator",
-    description: "Professional full-stack development services specializing in React, Next.js, Node.js, and cutting-edge web technologies. Hire expert developers for your project.",
+    title: "Kingsley Umeh | Full-Stack Engineer for Marketplaces & RBAC Systems",
+    description: "Engineering scalable marketplace systems and internal tools with React, Node.js, MongoDB, and role-based access control.",
     images: ["/me.jpeg"],
     creator: "@lordkign2",
     site: "@lordkign2"
