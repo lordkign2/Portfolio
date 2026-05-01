@@ -64,47 +64,12 @@ const ProjectsSection = () => {
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{proj.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">
-                        {proj.description}
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                        {proj.description.length > 150 ? `${proj.description.substring(0, 150)}...` : proj.description}
                       </p>
-                      {proj.problemContext && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">Problem:</span> {proj.problemContext}
-                        </p>
-                      )}
-                      {proj.architectureOverview && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">Architecture:</span> {proj.architectureOverview}
-                        </p>
-                      )}
-                      {proj.authStrategy && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">Auth:</span> {proj.authStrategy}
-                        </p>
-                      )}
-                      {proj.dataModelStructure && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">Data Model:</span> {proj.dataModelStructure}
-                        </p>
-                      )}
-                      {proj.apiDesignPatterns && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">API Design:</span> {proj.apiDesignPatterns}
-                        </p>
-                      )}
-                      {proj.engineeringDecisions && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">Trade-off:</span> {proj.engineeringDecisions}
-                        </p>
-                      )}
-                      {proj.deploymentStrategy && (
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
-                          <span className="font-semibold text-gray-800 dark:text-gray-100">Deployment:</span> {proj.deploymentStrategy}
-                        </p>
-                      )}
                       {proj.complexityTags && proj.complexityTags.length > 0 && (
                         <div className="flex flex-wrap gap-2 mb-4">
-                          {proj.complexityTags.map((tag) => (
+                          {proj.complexityTags.slice(0, 3).map((tag) => (
                             <span
                               key={tag}
                               className="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
@@ -112,7 +77,17 @@ const ProjectsSection = () => {
                               {tag}
                             </span>
                           ))}
+                          {proj.complexityTags.length > 3 && (
+                            <span className="text-xs font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700/40 dark:text-gray-400">
+                              +{proj.complexityTags.length - 3} more
+                            </span>
+                          )}
                         </div>
+                      )}
+                      {proj.caseStudyHref && (
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 italic">
+                          Detailed technical analysis available in case study →
+                        </p>
                       )}
                       <div className="flex justify-between flex-wrap gap-3">
                         {proj.caseStudyHref && (
