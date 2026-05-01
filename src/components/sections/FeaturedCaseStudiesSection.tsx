@@ -33,7 +33,11 @@ const FeaturedCaseStudiesSection = () => {
               transition={{ duration: 0.45, delay: index * 0.1 }}
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{project.problemContext || project.description}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                {(project.problemContext || project.description).length > 150 
+                  ? `${(project.problemContext || project.description).substring(0, 150)}...` 
+                  : (project.problemContext || project.description)}
+              </p>
               {project.complexityTags && project.complexityTags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.complexityTags.slice(0, 3).map((tag) => (
@@ -44,8 +48,16 @@ const FeaturedCaseStudiesSection = () => {
                       {tag}
                     </span>
                   ))}
+                  {project.complexityTags.length > 3 && (
+                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700/40 dark:text-gray-400">
+                      +{project.complexityTags.length - 3} more
+                    </span>
+                  )}
                 </div>
               )}
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-4 italic">
+                Detailed technical analysis available in case study →
+              </p>
               <Link
                 href={project.caseStudyHref!}
                 className="inline-block text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
