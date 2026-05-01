@@ -73,7 +73,7 @@ const ContactCTASection = () => {
               View Case Studies
             </a>
             <a 
-              href="https://calendly.com"
+              href="https://calendly.com/lordkign1/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-500 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl cursor-target"
