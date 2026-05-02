@@ -30,7 +30,7 @@ const SystemDesignSnapshotSection = () => {
             <Arrow />
             <Node label="API Layer" detail="Node.js / Express" />
             <Arrow />
-            <Node label="Auth + Data" detail="JWT Middleware + MongoDB" />
+            <Node label="Auth + Data" detail="JWT Middleware + MongoDB/PostgreSQL" />
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
