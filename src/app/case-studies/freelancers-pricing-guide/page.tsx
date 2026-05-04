@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/freelancers-pricing-guide",
   },
+  keywords: ["case study", "freelancers pricing guide", "Next.js", "TypeScript", "pricing calculator", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | Freelancers Pricing Guide",
+    description: "Engineering case study for a pricing guide built with Next.js, covering modern UI design, responsive layouts, and pricing calculator functionality.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/freelancers-pricing-guide",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/pricewiseui.jpg", width: 1200, height: 630, alt: "Freelancers Pricing Guide case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | Freelancers Pricing Guide",
+    description: "Engineering case study for a pricing guide built with Next.js, covering modern UI design, responsive layouts, and pricing calculator functionality.",
+    images: ["/pricewiseui.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function FreelancersPricingCaseStudyPage() {

@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/ai-task-manager",
   },
+  keywords: ["case study", "AI task manager", "Python", "React", "machine learning", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | AI Task Manager",
+    description: "Engineering case study for an AI-powered task management application built with Python backend and React frontend, covering machine learning integration and task prioritization.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/ai-task-manager",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/lifePilot.jpg", width: 1200, height: 630, alt: "AI Task Manager case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | AI Task Manager",
+    description: "Engineering case study for an AI-powered task management application built with Python backend and React frontend, covering machine learning integration and task prioritization.",
+    images: ["/lifePilot.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function AITaskManagerCaseStudyPage() {

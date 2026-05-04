@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/housing-waitlist-platform",
   },
+  keywords: ["case study", "housing waitlist", "Next.js", "TypeScript", "email notifications", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | Housing Waitlist Platform",
+    description: "Engineering case study for a waitlist platform built with Next.js and TypeScript, covering user registration, waitlist management, and email notifications.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/housing-waitlist-platform",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/waitlist.jpg", width: 1200, height: 630, alt: "Housing Waitlist Platform case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | Housing Waitlist Platform",
+    description: "Engineering case study for a waitlist platform built with Next.js and TypeScript, covering user registration, waitlist management, and email notifications.",
+    images: ["/waitlist.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function HousingWaitlistCaseStudyPage() {
