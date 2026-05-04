@@ -1,10 +1,80 @@
+# Enhanced robots.txt for Kingsley Umeh Portfolio
 # https://www.robotstxt.org/robotstxt.html
+
+# Global directives
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Disallow crawling of API routes and specific build internals
+# Disallow crawling of sensitive and internal paths
 Disallow: /api/
 Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
 
+# Allow specific important paths
+Allow: /images/
+Allow: /me.jpeg
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
+
+# Special directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Disallow specific bots that don't add value
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: BacklinkCrawler
+Disallow: /
+
+# Sitemap locations
 Sitemap: https://umeh-kingsley-portfolio.netlify.app/sitemap.xml
+Sitemap: https://umeh-kingsley-portfolio.netlify.app/sitemap-index.xml
+
+# Additional SEO directives
+# Host directive for Yandex (if needed)
+# Host: https://umeh-kingsley-portfolio.netlify.app
+
+# Additional crawl budget optimization
+User-agent: *
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow search engines to discover important content
+Allow: /case-studies/
+Allow: /projects/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
 

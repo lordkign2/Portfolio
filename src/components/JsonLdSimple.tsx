@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function JsonLd() {
     const organizationSchema = {
         "@context": "https://schema.org",
@@ -261,7 +263,7 @@ export default function JsonLd() {
                 "name": "Why choose me as your developer?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "I have extensive experience in full-stack development with a proven track record of delivering high-quality projects on time. I stay updated with the latest technologies and best practices to ensure optimal performance and user experience."
+                    "text": "I have extensive experience in full-stack development with a proven track record of delivering high-quality projects on time. I stay updated with latest technologies and best practices to ensure optimal performance and user experience."
                 }
             },
             {

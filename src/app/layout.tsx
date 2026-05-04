@@ -5,17 +5,22 @@ import PageCinematicTransition from "@/components/PageCinematicTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TargetCursor from "@/components/ui/TargetCursor";
-import JsonLd from "@/components/JsonLd";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import JsonLd from "@/components/JsonLdSimple";
+import EnhancedAnalytics from "@/components/EnhancedAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -25,6 +30,23 @@ export const metadata: Metadata = {
     template: "%s | Kingsley Umeh - Professional Full-Stack Developer"
   },
   description: "Senior Full-Stack Developer specializing in React, Next.js, Node.js, and cutting-edge web technologies. Creating exceptional digital experiences with 4+ years of expertise. Hire expert developers for your next project.",
+  // Additional SEO metadata
+  other: {
+    'msapplication-TileColor': '#ffffff',
+    'msapplication-config': '/browserconfig.xml',
+    'apple-mobile-web-app-title': 'Kingsley Umeh Portfolio',
+    'application-name': 'Kingsley Umeh Portfolio',
+    'msapplication-tooltip': 'Professional Full-Stack Developer Portfolio',
+    'msapplication-starturl': '/',
+    'msapplication-navbutton-color': '#ffffff',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'Kingsley Umeh',
+    'format-detection': 'telephone=no',
+    'mobile-web-app-capable': 'yes',
+    'theme-color': '#ffffff',
+    'apple-touch-fullscreen': 'yes',
+  },
   keywords: [
     "full stack developer",
     "React developer",
@@ -124,9 +146,41 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <JsonLd />
-        <GoogleAnalytics />
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://umeh-kingsley-portfolio.netlify.app" />
+        
+        {/* DNS prefetch for likely navigation */}
+        <link rel="dns-prefetch" href="//github.com" />
+        <link rel="dns-prefetch" href="//linkedin.com" />
+        <link rel="dns-prefetch" href="//twitter.com" />
+        
+        {/* Critical CSS preload */}
+        <link rel="preload" href="/_next/static/css/main.css" as="style" />
+        
+        {/* Structured Data */}
+        <div dangerouslySetInnerHTML={{ __html: JsonLd() }} />
+        
+        {/* Enhanced Analytics */}
+        <EnhancedAnalytics />
+        
+        {/* Verification */}
         <meta name="google-site-verification" content="0nUoGf7qyjKw3SZuwmaKdExiAe2aCQGT4rzxyFfSJwc" />
+        <meta name="msvalidate.01" content="0nUoGf7qyjKw3SZuwmaKdExiAe2aCQGT4rzxyFfSJwc" />
+        <meta name="yandex-verification" content="0nUoGf7qyjKw3SZuwmaKdExiAe2aCQGT4rzxyFfSJwc" />
+        
+        {/* Additional meta tags for SEO */}
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="language" content="English" />
+        <meta name="geo.region" content="NG-LA" />
+        <meta name="geo.placename" content="Lagos" />
+        <meta name="geo.position" content="6.5244;3.3792" />
+        <meta name="ICBM" content="6.5244, 3.3792" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -137,6 +191,9 @@ export default function RootLayout({
           <TargetCursor />
         </div>
         <PageCinematicTransition>{children}</PageCinematicTransition>
+        <div dangerouslySetInnerHTML={{ __html: JsonLd() }} />
+        <EnhancedAnalytics />
+        <CookieConsent />
         <Footer />
       </body>
     </html>
