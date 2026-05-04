@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/city-explorer-platform",
   },
+  keywords: ["case study", "city explorer", "RBAC", "Node.js", "MongoDB", "Socket.io", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | City Explorer Platform",
+    description: "Detailed engineering case study for the City Explorer Platform, covering architecture, JWT auth strategy, MongoDB data modeling, API patterns, and deployment decisions.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/city-explorer-platform",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/cityExplorer.jpg", width: 1200, height: 630, alt: "City Explorer Platform case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | City Explorer Platform",
+    description: "Detailed engineering case study for the City Explorer Platform, covering architecture, JWT auth strategy, MongoDB data modeling, API patterns, and deployment decisions.",
+    images: ["/cityExplorer.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function CityExplorerCaseStudyPage() {

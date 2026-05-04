@@ -1,5 +1,7 @@
 // Analytics utility functions for consistent tracking across the application
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? '';
+
 export interface AnalyticsEvent {
   action: string;
   category: string;
@@ -80,7 +82,7 @@ class AnalyticsTracker {
         page_path: pagePath || window.location.pathname,
         page_title: pageTitle || document.title,
         page_location: window.location.href,
-        send_to: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+        send_to: GA_ID,
       });
     }
   }
@@ -195,7 +197,7 @@ class AnalyticsTracker {
   // Set user properties
   setUserProperties(properties: UserProperties) {
     if (window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+      window.gtag('config', GA_ID, {
         custom_map: properties,
       });
     }
@@ -326,15 +328,3 @@ export const useAnalytics = () => {
     setUserProperties: analytics.setUserProperties.bind(analytics),
   };
 };
-
-// Extend window interface for gtag
-declare global {
-  interface Window {
-    gtag: (
-      command: string,
-      targetId: string,
-      config?: Record<string, any>
-    ) => void;
-    dataLayer: any[];
-  }
-}

@@ -5,7 +5,7 @@ import PageCinematicTransition from "@/components/PageCinematicTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TargetCursor from "@/components/ui/TargetCursor";
-import JsonLd from "@/components/JsonLdSimple";
+import JsonLd from "@/components/JsonLd";
 import EnhancedAnalytics from "@/components/EnhancedAnalytics";
 import CookieConsent from "@/components/CookieConsent";
 
@@ -41,11 +41,9 @@ export const metadata: Metadata = {
     'msapplication-navbutton-color': '#ffffff',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Kingsley Umeh',
     'format-detection': 'telephone=no',
     'mobile-web-app-capable': 'yes',
     'theme-color': '#ffffff',
-    'apple-touch-fullscreen': 'yes',
   },
   keywords: [
     "full stack developer",
@@ -162,7 +160,7 @@ export default function RootLayout({
         <link rel="preload" href="/_next/static/css/main.css" as="style" />
         
         {/* Structured Data */}
-        <div dangerouslySetInnerHTML={{ __html: JsonLd() }} />
+        <JsonLd />
         
         {/* Enhanced Analytics */}
         <EnhancedAnalytics />
@@ -195,6 +193,7 @@ export default function RootLayout({
         <EnhancedAnalytics />
         <CookieConsent />
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

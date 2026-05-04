@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function JsonLd() {
+export default function JsonLd(): React.ReactElement {
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -27,12 +27,12 @@ export default function JsonLd() {
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "NG",
-            "addressLocality": "Jos"
+            "addressLocality": "Lagos"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 9.9321,
-            "longitude": 8.8952
+            "latitude": 6.5244,
+            "longitude": 3.3792
         },
         "sameAs": [
             "https://github.com/lordkign2",
@@ -134,12 +134,13 @@ export default function JsonLd() {
         "priceRange": "$5000 - $10000",
         "address": {
             "@type": "PostalAddress",
-            "addressCountry": "NG"
+            "addressCountry": "NG",
+            "addressLocality": "Lagos"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 9.9321,
-            "longitude": 8.8952
+            "latitude": 6.5244,
+            "longitude": 3.3792
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
@@ -168,14 +169,6 @@ export default function JsonLd() {
         "name": "Kingsley Umeh Portfolio",
         "url": "https://umeh-kingsley-portfolio.netlify.app",
         "description": "Portfolio of Kingsley Umeh, Senior Full-Stack Developer specializing in React, Next.js, Node.js, and cutting-edge web technologies.",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": "https://umeh-kingsley-portfolio.netlify.app/search?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-        },
         "author": {
             "@type": "Person",
             "name": "Kingsley Umeh",
@@ -349,28 +342,6 @@ export default function JsonLd() {
         ]
     };
 
-    // Review schema for social proof
-    const reviewSchema = {
-        "@context": "https://schema.org",
-        "@type": "AggregateRating",
-        "itemReviewed": {
-            "@type": "Service",
-            "name": "Full-Stack Development Services",
-            "provider": {
-                "@type": "Person",
-                "name": "Kingsley Umeh"
-            }
-        },
-        "ratingValue": "4.8",
-        "reviewCount": "50",
-        "bestRating": "5",
-        "worstRating": "1",
-        "author": {
-            "@type": "Organization",
-            "name": "Client Reviews"
-        }
-    };
-
     // HowTo schema for development process
     const howToSchema = {
         "@context": "https://schema.org",
@@ -491,7 +462,6 @@ export default function JsonLd() {
         }
     };
 
-    // Generate HTML string with all schemas
     const schemas = [
         personSchema,
         organizationSchema,
@@ -499,12 +469,19 @@ export default function JsonLd() {
         professionalServiceSchema,
         breadcrumbSchema,
         faqSchema,
-        reviewSchema,
         howToSchema,
         videoSchema
     ];
 
-    return schemas.map(schema => 
-        `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
-    ).join('\n');
+    return (
+        <>
+            {schemas.map((schema, index) => (
+                <script
+                    key={index}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
+        </>
+    );
 }

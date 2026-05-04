@@ -1,5 +1,6 @@
 import Script from 'next/script';
-import { useEffect } from 'react';
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? '';
 
 // Types for custom events
 interface AnalyticsEvent {
@@ -25,7 +26,7 @@ export const analytics = {
   // Track page views
   pageView: (data: PageViewData) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+      window.gtag('config', GA_ID, {
         page_title: data.page_title,
         page_location: data.page_location,
         page_path: data.page_path,
@@ -114,7 +115,7 @@ export const analytics = {
   // Set user properties
   setUserProperties: (properties: UserProperties) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+      window.gtag('config', GA_ID, {
         custom_map: properties,
       });
     }
@@ -155,18 +156,6 @@ export const analytics = {
     }
   },
 };
-
-// Extend window type for gtag
-declare global {
-  interface Window {
-    gtag: (
-      command: string,
-      targetId: string,
-      config?: Record<string, any>
-    ) => void;
-    dataLayer: any[];
-  }
-}
 
 export default function EnhancedAnalytics() {
   if (process.env.NODE_ENV !== 'production') {

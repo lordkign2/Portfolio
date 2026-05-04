@@ -110,29 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: study.priority,
     }));
 
-    // Additional SEO pages
-    const seoPages = [
-        {
-            url: `${baseUrl}/sitemap.xml`,
-            lastModified: lastModified,
-            changeFrequency: 'monthly' as const,
-            priority: 0.5,
-        },
-        {
-            url: `${baseUrl}/robots.txt`,
-            lastModified: lastModified,
-            changeFrequency: 'monthly' as const,
-            priority: 0.5,
-        },
-        {
-            url: `${baseUrl}/rss.xml`,
-            lastModified: lastModified,
-            changeFrequency: 'weekly' as const,
-            priority: 0.6,
-        },
-    ];
-
-    return [...corePages, ...caseStudyPages, ...seoPages];
+    return [...corePages, ...caseStudyPages];
 }
 
 // Generate sitemap index for multiple sitemaps (if needed in future)

@@ -67,8 +67,6 @@ Sitemap: https://umeh-kingsley-portfolio.netlify.app/sitemap-index.xml
 # Additional crawl budget optimization
 User-agent: *
 Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
 Disallow: /*.log$
 
 # Allow search engines to discover important content

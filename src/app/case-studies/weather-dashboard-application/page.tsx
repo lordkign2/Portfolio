@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/weather-dashboard-application",
   },
+  keywords: ["case study", "weather dashboard", "React", "OpenWeather API", "data visualization", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | Weather Dashboard Application",
+    description: "Engineering case study for a weather forecasting application built with React and OpenWeather API, covering real-time data visualization, API integration, and responsive design.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/weather-dashboard-application",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/weather.jpg", width: 1200, height: 630, alt: "Weather Dashboard Application case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | Weather Dashboard Application",
+    description: "Engineering case study for a weather forecasting application built with React and OpenWeather API, covering real-time data visualization, API integration, and responsive design.",
+    images: ["/weather.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function WeatherDashboardCaseStudyPage() {

@@ -97,7 +97,7 @@ class ConversionTracker {
     };
 
     this.trackConversion(conversionData);
-    analytics.trackSocialClick(platform, url);
+    analytics.trackSocialInteraction(platform, 'click', url);
   }
 
   // Track file downloads
