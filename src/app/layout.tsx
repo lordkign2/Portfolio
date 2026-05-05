@@ -189,6 +189,9 @@ export default function RootLayout({
           <TargetCursor />
         </div>
         <PageCinematicTransition>{children}</PageCinematicTransition>
+        <div dangerouslySetInnerHTML={{ __html: JsonLd() }} />
+        <EnhancedAnalytics />
+        <CookieConsent />
         <Footer />
         <CookieConsent />
       </body>
