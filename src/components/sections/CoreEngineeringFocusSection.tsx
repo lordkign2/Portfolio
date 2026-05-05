@@ -6,7 +6,7 @@ const focusAreas = [
   "RESTful API architecture",
   "Admin dashboards and internal tools",
   "File upload and media pipelines",
-  "Database schema design (NoSQL focus)",
+  "Database schema design",
 ];
 
 const CoreEngineeringFocusSection = () => {

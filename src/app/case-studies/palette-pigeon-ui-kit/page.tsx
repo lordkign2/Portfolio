@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/palette-pigeon-ui-kit",
   },
+  keywords: ["case study", "Palette Pigeon", "UI kit", "design system", "Next.js", "TypeScript", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | Palette Pigeon UI Kit",
+    description: "Engineering case study for a comprehensive UI component library built with Next.js, covering design system architecture, component reusability, and complex UI structuring.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/palette-pigeon-ui-kit",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/palette-pigeon.png", width: 1200, height: 630, alt: "Palette Pigeon UI Kit case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | Palette Pigeon UI Kit",
+    description: "Engineering case study for a comprehensive UI component library built with Next.js, covering design system architecture, component reusability, and complex UI structuring.",
+    images: ["/palette-pigeon.png"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function PalettePigeonCaseStudyPage() {

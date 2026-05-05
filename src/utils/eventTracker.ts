@@ -18,7 +18,10 @@ declare global {
 // Define a proper type for the gtag function
 interface GtagType {
   (command: 'event', eventName: string, params?: EventParams): void;
-  (command: 'config' | 'set' | 'get' | 'consent', params?: Record<string, unknown>): void;
+  (command: 'config', targetId: string, params?: Record<string, unknown>): void;
+  (command: 'set' | 'get', params?: Record<string, unknown>): void;
+  (command: 'consent', action: string, params?: Record<string, unknown>): void;
+  (command: string, ...args: unknown[]): void;
 }
 
 export function trackEvent(eventName: string, eventParams?: EventParams): void {

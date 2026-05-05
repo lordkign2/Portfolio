@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/mil-hub",
   },
+  keywords: ["case study", "MIL Hub", "Flutter", "BLoC", "Firebase", "media literacy", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | MIL Hub",
+    description: "Engineering case study for MIL Hub, a media literacy platform built with Flutter, BLoC, and Firebase using Clean Architecture.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/mil-hub",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/milhub.jpeg", width: 1200, height: 630, alt: "MIL Hub case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | MIL Hub",
+    description: "Engineering case study for MIL Hub, a media literacy platform built with Flutter, BLoC, and Firebase using Clean Architecture.",
+    images: ["/milhub.jpeg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function MilHubCaseStudyPage() {

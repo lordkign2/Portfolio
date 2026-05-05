@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/starnumx-technology-website",
   },
+  keywords: ["case study", "StarnumX", "corporate website", "Next.js", "TypeScript", "responsive design", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | StarnumX Technology Website",
+    description: "Engineering case study for StarnumX corporate website built with Next.js, covering modern UI design, responsive layouts, and performance optimization.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/starnumx-technology-website",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/starnumx.jpg", width: 1200, height: 630, alt: "StarnumX Technology Website case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | StarnumX Technology Website",
+    description: "Engineering case study for StarnumX corporate website built with Next.js, covering modern UI design, responsive layouts, and performance optimization.",
+    images: ["/starnumx.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function StarnumXCaseStudyPage() {

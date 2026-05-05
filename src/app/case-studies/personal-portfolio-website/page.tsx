@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://umeh-kingsley-portfolio.netlify.app/case-studies/personal-portfolio-website",
   },
+  keywords: ["case study", "portfolio website", "Next.js", "SEO", "analytics", "conversion", "Kingsley Umeh", "portfolio"],
+  openGraph: {
+    title: "Case Study | Personal Portfolio Website",
+    description: "Engineering case study for a conversion-focused portfolio built with Next.js, covering performance optimization, analytics instrumentation, and SEO architecture.",
+    url: "https://umeh-kingsley-portfolio.netlify.app/case-studies/personal-portfolio-website",
+    siteName: "Kingsley Umeh Portfolio",
+    images: [{ url: "/portfolio.jpg", width: 1200, height: 630, alt: "Personal Portfolio Website case study — Kingsley Umeh" }],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Study | Personal Portfolio Website",
+    description: "Engineering case study for a conversion-focused portfolio built with Next.js, covering performance optimization, analytics instrumentation, and SEO architecture.",
+    images: ["/portfolio.jpg"],
+    creator: "@lordkign2",
+  },
 };
 
 export default function PortfolioCaseStudyPage() {
