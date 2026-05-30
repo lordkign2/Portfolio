@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { skills } from "@/data/skills"; // Assuming alias works, otherwise ../data/skills
+import { skills, getSkillPercentage } from "@/data/skills";
 
 export default function CategorizedSkills() {
-    const categories = ["Frontend", "Backend", "Mobile", "Tools", "Other"] as const;
+    const categories = ["Frontend", "Backend", "Mobile", "Tools", "Business", "Other"] as const;
 
     return (
         <section className="py-20 w-full">
@@ -39,7 +39,7 @@ export default function CategorizedSkills() {
                                 </div>
 
                                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                                    {categorySkills.map((skill, index) => (
+                                    {categorySkills.map((skill) => (
                                         <motion.div
                                             key={skill.label}
                                             whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
@@ -56,11 +56,12 @@ export default function CategorizedSkills() {
                                                 <motion.div
                                                     className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
                                                     initial={{ width: 0 }}
-                                                    whileInView={{ width: `${skill.level}%` }}
+                                                    whileInView={{ width: `${getSkillPercentage(skill.level)}%` }}
                                                     viewport={{ once: true }}
                                                     transition={{ duration: 1, delay: 0.2 }}
                                                 />
                                             </div>
+                                            <span className="text-[10px] text-gray-400 mt-1 capitalize">{skill.level}</span>
                                         </motion.div>
                                     ))}
                                 </div>

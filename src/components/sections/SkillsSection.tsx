@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { skills } from "../../data/skills";
+import { skills, getSkillPercentage } from "../../data/skills";
 import React, { Suspense } from "react";
 
 // Dynamically import UI components for better code splitting
@@ -77,7 +77,7 @@ const SkillsSection = () => {
               <div className="w-full bg-white/20 rounded-full h-2.5 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
+                  whileInView={{ width: `${getSkillPercentage(skill.level)}%` }}
                   viewport={{ once: true }}
                   transition={{
                     duration: 1.2,
@@ -86,7 +86,7 @@ const SkillsSection = () => {
                   className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
                 />
               </div>
-              <span className="text-blue-200 text-sm mt-2 font-medium">{skill.level}%</span>
+              <span className="text-blue-200 text-sm mt-2 font-medium capitalize">{skill.level}</span>
             </motion.div>
           ))}
         </div>
