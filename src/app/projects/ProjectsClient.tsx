@@ -1,26 +1,35 @@
 'use client';
+
+import React, { Suspense } from 'react';
 import { projects } from "../../data/projects";
 import SpotlightCard from '@/components/ui/SpotlightCard';
-import DotGrid from '@/components/ui/DotGrid';
 import Image from "next/image";
 import { FiGithub } from 'react-icons/fi';
 import { motion } from "framer-motion";
+
+const DotGrid = React.lazy(() => import('@/components/ui/DotGrid'));
+
+const ComponentLoader = () => (
+  <div className="w-full h-full bg-transparent" />
+);
 
 export default function ProjectsClient() {
   return (
     <section className="min-h-screen pt-32 px-6 bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100">
       <div className="w-full h-full absolute inset-0 z-0">
-        <DotGrid
-          dotSize={10}
-          gap={15}
-          baseColor="#5227FF"
-          activeColor="#5227FF"
-          proximity={120}
-          shockRadius={250}
-          shockStrength={5}
-          resistance={750}
-          returnDuration={1.5}
-        />
+        <Suspense fallback={<ComponentLoader />}>
+          <DotGrid
+            dotSize={10}
+            gap={15}
+            baseColor="#5227FF"
+            activeColor="#5227FF"
+            proximity={120}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          />
+        </Suspense>
       </div>
       <div className="max-w-6xl mx-auto z-10 pb-20">
         <motion.div
@@ -61,7 +70,7 @@ export default function ProjectsClient() {
         </div>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((proj, index) => (
+          {projects.map((proj) => (
             <div
               key={proj.id}
               className="transform transition-all duration-300 hover:-translate-y-2"

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiCheck, FiFacebook, FiInstagram } from "react-icons/fi";
+import Image from "next/image";
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
@@ -40,7 +41,17 @@ export default function Footer() {
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-3 
         rounded-full bg-white/5 dark:bg-black/30 backdrop-blur-xl border border-white/10 shadow-2xl hover:shadow-xl transition-all duration-300">
 
-        <p className="text-sm text-gray-300">&copy; {new Date().getFullYear()} Kingsley Umeh</p>
+        <div className="flex items-center gap-2">
+          <div className="relative w-5 h-5 rounded-full overflow-hidden border border-white/10 shadow-[0_0_5px_rgba(59,130,246,0.2)]">
+            <Image
+              src="/favicon.png"
+              alt="Kingsley Umeh Footer Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <p className="text-sm text-gray-300">&copy; {new Date().getFullYear()} Kingsley Umeh</p>
+        </div>
 
         <div className="flex gap-4 text-sm items-center">
           {socialLinks.map((link) => (

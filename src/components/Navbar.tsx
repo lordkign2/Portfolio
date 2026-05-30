@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import Image from "next/image";
 
 
 import ScrollProgress from "./ScrollProgress";
@@ -45,9 +46,17 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold text-white whitespace-nowrap cursor-target hover:text-blue-400 transition-colors"
+            className="flex items-center gap-2 text-xl font-bold text-white whitespace-nowrap cursor-target hover:text-blue-400 transition-colors"
           >
-            Kingsley.U
+            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/10 shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+              <Image
+                src="/favicon.png"
+                alt="Kingsley Umeh Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span>Kingsley.U</span>
           </Link>
 
           {/* Desktop Nav */}

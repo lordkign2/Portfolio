@@ -132,8 +132,7 @@ export const metadata: Metadata = {
   category: "technology",
   classification: "developer portfolio",
   generator: "Next.js",
-  referrer: "origin-when-cross-origin",
-  themeColor: "#ffffff"
+  referrer: "origin-when-cross-origin"
 };
 
 export default function RootLayout({
@@ -189,9 +188,6 @@ export default function RootLayout({
           <TargetCursor />
         </div>
         <PageCinematicTransition>{children}</PageCinematicTransition>
-        <div dangerouslySetInnerHTML={{ __html: JsonLd() }} />
-        <EnhancedAnalytics />
-        <CookieConsent />
         <Footer />
         <CookieConsent />
       </body>
