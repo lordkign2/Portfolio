@@ -149,8 +149,8 @@ describe('Test P3 — JSON-LD schema types preservation', () => {
   it('should contain all 8 required schema types in JsonLdSimple output', async () => {
     const { renderToStaticMarkup } = await import('react-dom/server');
     const React = await import('react');
-    const module = await import('../src/components/JsonLdSimple');
-    const JsonLdFn = module.default;
+    const importedModule = await import('../src/components/JsonLdSimple');
+    const JsonLdFn = importedModule.default;
 
     expect(typeof JsonLdFn).toBe('function');
 
@@ -208,8 +208,8 @@ describe('Test P4 — Case study page metadata preservation', () => {
 
   it('should have non-empty title, description, and canonical for all 9 case study pages', async () => {
     for (const pagePath of caseStudyPages) {
-      const module = await import(`../${pagePath}`);
-      const metadata = module.metadata as {
+      const importedModule = await import(`../${pagePath}`);
+      const metadata = importedModule.metadata as {
         title?: unknown;
         description?: unknown;
         alternates?: { canonical?: unknown };

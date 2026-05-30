@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Orb from '../../components/ui/Orb';
-import CategorizedSkills from '../../components/CategorizedSkills';
+import AboutManifesto from '../../components/AboutManifesto';
 
 export default function AboutClient() {
   return (
@@ -143,9 +143,9 @@ export default function AboutClient() {
         </motion.div>
       </div>
 
-      {/* Skills Section */}
+      {/* Manifesto Section */}
       <div className="relative z-10">
-        <CategorizedSkills />
+        <AboutManifesto />
       </div>
     </section>
   );

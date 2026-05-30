@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { analytics } from './lib/analytics';
 
 // Middleware for SEO and analytics optimization
 export function middleware(request: NextRequest) {
